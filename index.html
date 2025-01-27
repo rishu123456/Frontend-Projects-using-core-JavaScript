@@ -6,6 +6,13 @@
     <title>Simple Calculator</title>
     <script>
 
+        function debounceCalculate(){
+          const time=  setTimeout(function ss(){
+                calculateSum();
+            },100)
+            clearTimeout(time);
+        }
+
         // function calculateSum(){
         //     let input1=document.getElementById("i");
         //     let value1=input1.value;
