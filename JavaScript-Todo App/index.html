@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function addTodo() {
+            let title = document.getElementById("title").value;
+            let desc = document.getElementById('desc').value;
+
+            let original = document.getElementById("add").innerHTML;
+            original += `<div>
+                <div>${title}</div>
+                <div>${desc}</div>
+                <button>Mark as Done</button>
+            </div>`;
+
+            document.getElementById("add").innerHTML = original;
+        }
+    </script>
 </head>
 <body>
-    
+    <input id="title" type="text" placeholder="title"> <br/>
+    <input id="desc" type="text" placeholder="description"><br/>
+    <button id="btn" onclick="addTodo()">Add Todo</button>
+    <div id="add"></div>
 </body>
 </html>

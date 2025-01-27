@@ -1,0 +1,1 @@
+This is a jargon javascript way to create to do app in which we cann't implement the functionalities of marks as done by this way.
