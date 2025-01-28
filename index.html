@@ -4,15 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calculator</title>
+    <script>
+
+        function debounceCalculate(){
+          const time=  setTimeout(function ss(){
+                calculateSum();
+            },100)
+            clearTimeout(time);
+        }
+
+        // function calculateSum(){
+        //     let input1=document.getElementById("i");
+        //     let value1=input1.value;
+        //     let input2=document.getElementById("i1");
+        //     let vaue2=input2.value;
+        //      let totalsum1=document.getElementById("totalsum");
+        //      fetch("hghjkdjdsjhdkha=value &b=value2")
+        //      .then(re=>res.text())
+        //      .then(re=>totalsum1.innerHTML=re)
+        // }
+
+      async  function calculateSum(){
+            let input1=document.getElementById("i");
+            let value1=input1.value;
+            let input2=document.getElementById("i1");
+            let vaue2=input2.value;
+             let totalsum1=document.getElementById("totalsum");
+             const res=await fetch(jkjhvkwkslw);
+             const res1=res.text();
+             totalsum1.innerHTM=res1;
+            
+        }
+        
+
+    </script>
 </head>
 <body>
     
     <div style="display: flex; flex-direction: column; width: 100px;">
         <input id="i" type="text" placeholder="Enter number 1">
         <input id="i1" type="text" placeholder="Enter number 2">
-        <button id="sum">Calculate Sum</button>
+        <button onclick="calculateSum()">Calculate Sum</button>
         <div id="totalsum">Total Sum</div>
     </div>
-    <script src="calculator.js"></script>
 </body>
 </html>
